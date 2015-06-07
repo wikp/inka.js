@@ -17,41 +17,43 @@ do whatever you want with this object.
 
 config.js:
 
-    var self = module.exports = {
-        url: 'http://exaample.com/html',
-        rootUrl: 'http://example.com/', // for links starting with "/"
-        debounce: 1000,
-        selectors: {
-            article: 'article',
-            links: 'a'
+```js
+var self = module.exports = {
+    url: 'http://exaample.com/html',
+    rootUrl: 'http://example.com/', // for links starting with "/"
+    debounce: 1000,
+    selectors: {
+        article: 'article',
+        links: 'a'
+    },
+    callbacks: {
+        toArticle: function($) {
+            return {
+                title: $('h2 > a').text(),
+                date: $('time').attr('datetime'),
+                body: $('section').html()
+            };
         },
-        callbacks: {
-            toArticle: function($) {
-                return {
-                    title: $('h2 > a').text(),
-                    date: $('time').attr('datetime'),
-                    body: $('section').html()
-                };
-            },
-            shouldDownloadLink: function($) { // probably you want to filter only "next page" links
-                return $('a').text() == '»';
-            },
-            extractUrlFromLink: function($) {
-                return $('a').attr('href');
-            }
+        shouldDownloadLink: function($) { // probably you want to filter only "next page" links
+            return $('a').text() == '»';
+        },
+        extractUrlFromLink: function($) {
+            return $('a').attr('href');
         }
-    };
-
+    }
+};
+```
 
 download.js:
 
-    var InkaCrawler = require('../lib/inka-crawler').InkaCrawler;
-    var crawler = new InkaCrawler(require('./config'));
+```js
+var InkaCrawler = require('../lib/inka-crawler').InkaCrawler;
+var crawler = new InkaCrawler(require('./config'));
 
-    crawler.toObservable().subscribe(function(article) {
-        // save to the mongodb, publish on message broker, etc.
-    });
-
+crawler.toObservable().subscribe(function(article) {
+    // save to the mongodb, publish on message broker, etc.
+});
+```
 
 ## Limitations
 
