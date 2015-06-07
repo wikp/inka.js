@@ -1,6 +1,6 @@
 # inka.js - Reactive Web Crawler
 
-Inka is useful especially for downloading contents of blogs, news sites, and so on.
+Inka is useful especially for downloading content of blogs, news sites, and so on.
 
 ## Requirements
 
@@ -8,7 +8,7 @@ Inka is useful especially for downloading contents of blogs, news sites, and so 
 
 ## How to use
 
-Take at the `example` directory.
+Take a look at the `example` directory.
 
 But for short you configure which part of site is an "article", what types of
 links you want to visit, decide how an article object should look like and finally
@@ -62,8 +62,9 @@ As for now `inka.js` supports only pages that have full content of an article on
 ## inka?
 
 A friend of mine has a cat named "Inka" and a blog on which she had plenty of notes about the kitty
-that she want to migrate to wordpress.com. I've decided  to help her with that. New blog about cats,
-handmade works and sewing you can visit [here][1] (in Polish).
+that she want to migrate to new blog on wordpress.com. I've decided to help her with that.
+
+New blog about cats, handmade works and sewing you can visit [here][1] (in Polish).
 
 
 [1]: http://diywithacat.wordpress.com/
