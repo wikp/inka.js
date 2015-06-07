@@ -19,7 +19,7 @@ config.js:
 
 ```js
 var self = module.exports = {
-    url: 'http://exaample.com/html',
+    url: 'http://example.com/html',
     rootUrl: 'http://example.com/', // for links starting with "/"
     debounce: 1000,
     selectors: {
