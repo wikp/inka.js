@@ -1,0 +1,37 @@
+{
+  "name": "inka.js",
+  "version": "1.0.0",
+  "description": "Reactive, configurable web crawler",
+  "author": "Piotr Wikieł <piotr.wikiel@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "crawler",
+    "reactive",
+    "rx",
+    "spider",
+    "blog",
+    "archive"
+  ],
+  "main": "lib",
+  "repository": "wikp/inka.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "colors": "^1.1.0",
+    "promise": "^7.0.1",
+    "request": "^2.57.0",
+    "rx": "^2.5.3",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  },
+  "files": [
+    "lib",
+    "example",
+    "README.md",
+    "LICENSE"
+  ]
+}
